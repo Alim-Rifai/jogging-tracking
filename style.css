@@ -1,0 +1,159 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.tracker {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.tracker h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stats-box {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats-box .label {
+    font-size: 0.9em;
+    color: #28a745;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.stats-box .value {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Penempatan posisi kotak */
+#distanceBox {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#timeBox {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#speedBox {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#caloriesBox {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.buttons button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#startRun {
+    background-color: #28a745;
+    color: white;
+}
+
+#pauseRun {
+    background-color: #ffc107;
+    color: white;
+}
+
+#stopRun {
+    background-color: #dc3545;
+    color: white;
+}
+
+.buttons button:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.log {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.log h3 {
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.log-entry {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #28a745;
+    border-radius: 5px;
+}
+
+.log-entry p {
+    margin: 5px 0;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .tracker, .log {
+        padding: 20px;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .buttons button {
+        width: 100%;
+    }
+}

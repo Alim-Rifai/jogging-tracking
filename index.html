@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogging Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="tracker">
+        <h2>Jogging Tracker</h2>
+        <div class="stats-container">
+            <div id="distanceBox" class="stats-box">
+                <p class="label">Total KM</p>
+                <p id="distance" class="value">0.0</p>
+            </div>
+            <div id="timeBox" class="stats-box">
+                <p class="label">Durasi</p>
+                <p id="time" class="value">00:00:00</p>
+            </div>
+            <div id="speedBox" class="stats-box">
+                <p class="label">Kecepatan</p>
+                <p id="speed" class="value">0.0</p>
+            </div>
+            <div id="caloriesBox" class="stats-box">
+                <p class="label">Kalori</p>
+                <p id="calories" class="value">0</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="startRun">Start</button>
+            <button id="pauseRun" disabled>Pause</button>
+            <button id="stopRun" disabled>Stop</button>
+        </div>
+    </div>
+
+    <div class="log" id="log">
+        <h3>Riwayat Lari</h3>
+        <!-- Log entries akan ditambahkan di sini -->
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
